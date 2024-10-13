@@ -86,4 +86,9 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  .custom-first-letter:first-letter {
+    font-size: 3rem; /* Larger size for the first letter */
+    font-weight: bold; /* Ensures the first letter is bold */
+  }
 }
