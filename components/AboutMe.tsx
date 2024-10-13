@@ -57,7 +57,7 @@ const AboutMe = () => {
       {/* About Paragraph */}
       <div className="max-w-sm md:max-w-lg mx-auto px-4 mt-2">
         <p className="text-xs md:text-sm lg:text-base sm:text-xs text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-          With years of experience in software development, I've worked
+          With years of experience in software development, I&apos;ve worked
           with various tech stack like Java, Spring, Angular, IoT, BlockChain, GenAI, 
           Batch Processing, AWS Cloud, Golang, AngularJS, React, Next.js, Node.js, and SQL. 
           I enjoy tackling real-world problems through code and am always eager to
