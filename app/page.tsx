@@ -1,3 +1,4 @@
+import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar/NavBar";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <div className = "max-w-7xl w-full">
         <NavBar></NavBar>
         <Hero/>
+        <AboutMe></AboutMe>
       </div>
     </main>
   );
