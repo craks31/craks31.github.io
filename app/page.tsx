@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar/NavBar";
-import { FloatingNav } from "@/components/ui/FloatingNav";
-import { FaHome } from "react-icons/fa";
+
 
 export default function Home() {
   return (

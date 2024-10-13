@@ -4,7 +4,7 @@ import { FaHome } from "react-icons/fa";
 
 const NavBar = () => {
 
-  const [isOpen, setIsOpen] = useState(false);
+  //const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="navbar z-10 realtive flex justify-around items-center p-4 mx-auto">
        <h1 className="uppercase text-lg whitespace-nowrap p-0">Sai Rakesh Pokala</h1>
