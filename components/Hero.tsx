@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import { FaDownload, FaFileDownload, FaLocationArrow, FaPhone } from "react-icons/fa";
+import { FaFileDownload, FaPhone } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -34,7 +35,7 @@ const Hero = () => {
         </div>
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest mb-4 text-xs text-center text-blue-100 max-w-80">
-            Namasthe World. I'm
+            Namasthe World. I&apos;m
           </p>
           <p className="text-center md:tracking-wider text-[20px] md:text-3xl lg:text-4xl">
             Sai Rakesh Pokala
@@ -51,6 +52,9 @@ const Hero = () => {
           <MagicButton
             title="Download CV"
             icon={<FaFileDownload></FaFileDownload>}
+            handleClick = {() => {
+                window.open('/docs/cv.pdf', '_blank');
+              }}
             position="right"
           />
 
