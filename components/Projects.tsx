@@ -22,7 +22,7 @@ const projects = [
 
 const Projects: React.FC = () => {
   return (
-    <div id="projects-section" className="w-full max-w-6xl mx-auto mt-10"> {/* No changes here */}
+    <div id="projects-section" className="w-full max-w-6xl mx-auto mt-10"> 
       <div className="text-justify mb-6 px-4"> {/* Added padding to ensure text section is properly centered */}
         <p className="text-3xl font-bold text-gray-900 dark:text-gray-100">My Projects</p>
       </div>

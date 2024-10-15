@@ -37,7 +37,7 @@ const NavBar = () => {
         <li className="flex items-center space-x-2">
           <FaHome /> <span>Home</span>
         </li>
-        <li className="whitespace-nowrap">About me</li>
+        <li className="whitespace-nowrap"><a href = "#aboutme-section">About me</a></li>
         <li className="whitespace-nowrap"><a href = "#projects-section">Projects</a></li>
         <li className="whitespace-nowrap">Skills</li>
         <li className="whitespace-nowrap">Contact</li>
