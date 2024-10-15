@@ -1,6 +1,8 @@
 import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar/NavBar";
+import Projects from "@/components/Projects";
+import SkillSet from "@/components/SkillSet";
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
         <NavBar></NavBar>
         <Hero/>
         <AboutMe></AboutMe>
+        <SkillSet></SkillSet>
+        <Projects></Projects>
       </div>
     </main>
   );

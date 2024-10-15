@@ -25,7 +25,7 @@ const NavBar = () => {
             <FaHome /> <span>Home</span>
           </li>
           <li>About me</li>
-          <li>Projects</li>
+          <li><a href = "projects-section"/>Projects</li>
           <li>Skills</li>
           <li>Contact</li>
         </ul>
@@ -38,7 +38,7 @@ const NavBar = () => {
           <FaHome /> <span>Home</span>
         </li>
         <li className="whitespace-nowrap">About me</li>
-        <li className="whitespace-nowrap">Projects</li>
+        <li className="whitespace-nowrap"><a href = "#projects-section">Projects</a></li>
         <li className="whitespace-nowrap">Skills</li>
         <li className="whitespace-nowrap">Contact</li>
       </ul>
