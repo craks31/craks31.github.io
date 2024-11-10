@@ -17,7 +17,7 @@ const Contact = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 flex flex-col items-start text-left">
           <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-            Let's Talk
+            Let`&apos;`s Talk
           </h1>
           <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
             Feel free to reach out to me
@@ -26,7 +26,7 @@ const Contact = () => {
           <div className="space-y-4 text-gray-800 dark:text-gray-300">
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-xl" />
-              <p className="text-lg">your-email@gmail.com</p>
+              <p className="text-lg">rakeshpokala97@gmail.com</p>
               <button
                 onClick={handleCopyEmail}
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -37,12 +37,12 @@ const Contact = () => {
 
             <div className="flex items-center space-x-2">
               <FaPhone className="text-xl" />
-              <p className="text-lg">+123 456 789</p>
+              <p className="text-lg">+1 913 407 2513</p>
             </div>
 
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-xl" />
-              <p className="text-lg">123 Main Street, City, Country</p>
+              <p className="text-lg">Aubrey, TX, United States</p>
             </div>
           </div>
         </div>
