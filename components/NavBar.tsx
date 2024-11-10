@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa6";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="navbar z-10 realtive flex justify-around items-center p-4 mx-auto">
+    <div className="navbar z-10 realtive flex justify-around items-center p-4 mx-auto overflow-hidden shadow-md top-0 left-0 right-0" >
       <h1 className="text-red-500 text-2xl font-extrabold tracking-wide drop-shadow-lg custom-first-letter">
         Rakesh Pokala
       </h1>
@@ -24,10 +24,10 @@ const NavBar = () => {
           <li className="flex items-center justify-center space-x-2">
             <FaHome /> <span>Home</span>
           </li>
-          <li>About me</li>
-          <li><a href = "projects-section"/>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <li><a href = "#aboutme-section">About me</a></li>
+          <li><a href = "#skills-section">Skills</a></li>
+          <li><a href = "#projects-section">Projects</a></li>
+          <li><a href = "#contact-section">Contact</a></li>
         </ul>
       </div>
       )}
@@ -38,9 +38,9 @@ const NavBar = () => {
           <FaHome /> <span>Home</span>
         </li>
         <li className="whitespace-nowrap"><a href = "#aboutme-section">About me</a></li>
+        <li className ="whitespace-nowrap"><a href = "#skills-section">Skills</a></li>
         <li className="whitespace-nowrap"><a href = "#projects-section">Projects</a></li>
-        <li className="whitespace-nowrap">Skills</li>
-        <li className="whitespace-nowrap">Contact</li>
+        <li className="whitespace-nowrap"><a href = "#contact-section">Contact</a></li>
       </ul>
     </div>
   );

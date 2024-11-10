@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-import NavBar from "@/components/NavBar/NavBar";
+import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import SkillSet from "@/components/SkillSet";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutMe></AboutMe>
         <SkillSet></SkillSet>
         <Projects></Projects>
+        <Contact></Contact>
       </div>
     </main>
   );

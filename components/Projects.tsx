@@ -3,20 +3,20 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'This is the first project. It involves building a full-stack web application with React and Node.js.',
+    title: 'Cloud based Real Time Traffic Monitoring',
+    description: 'The goal of this project is to build a cloud-based traffic analysis system that can analyze the traffic data from historic data. The big data is processed through Kafka and analyzed through Spark framework to provide the analysis.',
   },
   {
-    title: 'Project Two',
-    description: 'This project is about blockchain integration using Solidity and Ethereum smart contracts.',
+    title: 'College Chatbot',
+    description: 'Developed the student chatbot app using NLP, TF-IDF, Cosine similarity & Flask.',
   },
   {
-    title: 'Project Three',
-    description: 'An IoT-based solution for monitoring environmental conditions in real-time.',
+    title: 'Quantum Safe Algorithm XMSS for payment security',
+    description: 'Demonstrated the XMSS as a quantum safe contestant for the use in payment security data communications.',
   },
   {
-    title: 'Project Four',
-    description: 'A data visualization dashboard built with React and D3.js for analyzing financial data.',
+    title: 'Nine Men Morris Digital Board Game ',
+    description: 'Developed Nine Men Morris Digital Board Game based on Java and Java FX following software development life cycle and AGILE methodologies',
   },
 ];
 
