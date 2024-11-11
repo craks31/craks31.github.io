@@ -10,7 +10,6 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-
   }[];
   className?: string;
 }) => {
@@ -25,11 +24,11 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-        key={idx} // Add a key prop here for React to uniquely identify items
-        className="relative group block p-2 h-full w-full cursor-default" // "cursor-default" disables the pointer cursor
-        onMouseEnter={() => setHoveredIndex(idx)}
-        onMouseLeave={() => setHoveredIndex(null)}
-      >
+          key={idx} // Add a key prop here for React to uniquely identify items
+          className="relative group block p-2 h-full w-full cursor-default" // "cursor-default" disables the pointer cursor
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span

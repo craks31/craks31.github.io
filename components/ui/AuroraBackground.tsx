@@ -1,12 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
- 
+
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
   showRadialGradient?: boolean;
 }
- 
+
 export const AuroraBackground = ({
   className,
   children,
@@ -14,17 +14,17 @@ export const AuroraBackground = ({
   ...props
 }: AuroraBackgroundProps) => {
   return (
-<main
-  className={cn(
-    "relative flex flex-col min-h-[50vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg py-2 mb-8", 
-    className
-  )}
-  {...props}
->
-  <div className="absolute inset-0 overflow-hidden">
-    <div
+    <main
       className={cn(
-        `
+        "relative flex flex-col min-h-[50vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900 text-slate-950 transition-bg py-2 mb-8",
+        className
+      )}
+      {...props}
+    >
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className={cn(
+            `
         [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
         [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
         [--aurora:repeating-linear-gradient(100deg,var(--blue-500)_30%,var(--indigo-300)_15%,var(--blue-300)_20%,#cbacf9_25%,var(--indigo-500)_15%)]
@@ -39,17 +39,16 @@ export const AuroraBackground = ({
         after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
         pointer-events-none
         absolute -inset-[10px] opacity-50 will-change-transform`,
-        showRadialGradient &&
-          `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
-      )}
-    ></div>
-  </div>
+            showRadialGradient &&
+              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
+          )}
+        ></div>
+      </div>
 
-  {/* Children content */}
-  <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-    {children}
-  </div>
-</main>
-
+      {/* Children content */}
+      <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        {children}
+      </div>
+    </main>
   );
 };

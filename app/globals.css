@@ -70,6 +70,10 @@
   * {
     @apply border-border !scroll-smooth;
   }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem; /* Adjust 4rem based on navbar height */
+  }
   body {
     @apply bg-background text-foreground;
   }

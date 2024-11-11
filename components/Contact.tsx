@@ -3,7 +3,6 @@ import React from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegCopy } from "react-icons/fa";
 
 const Contact = () => {
-
   // Function to copy email to clipboard
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("your-email@gmail.com");
@@ -11,13 +10,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full pt-20 pb-10 relative" id="contact-section">
-      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.16] bg-grid-black/[0.2] absolute top-0 left-0 z-0"></div>
+    <div className="w-full mt-5 pt-20 pb-10 relative" id="contact-section">
+      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.09] bg-grid-black/[0.2] absolute top-0 left-0 z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 flex flex-col items-start text-left">
           <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-            Let`&apos;`s Talk
+            Let&apos;s Talk
           </h1>
           <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
             Feel free to reach out to me

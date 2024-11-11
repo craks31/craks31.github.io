@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HoverEffect } from "./ui/HoverEffect"; 
+import { HoverEffect } from "./ui/HoverEffect";
 // Define a type for the skills
 type Skill = {
   name: string;
@@ -116,7 +116,10 @@ const skills: SkillCategory[] = [
 // Card component for "Tech Competency" with skill bars
 const TechCompetencyCard: React.FC<SkillCategory> = ({ category, skills }) => {
   return (
-    <div className="rounded-lg shadow-md p-6 bg-white dark:bg-gray-800 w-full mb-8">
+    <div
+      id="skills-section"
+      className="rounded-lg shadow-md p-6 bg-white dark:bg-gray-800 w-full mb-8"
+    >
       <h3 className="text-2xl font-semibold dark:text-white">{category}</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         {skills.map((skill, index) => (
@@ -177,9 +180,11 @@ const SkillSet: React.FC = () => {
 
       {/* Parallel cards below with hover effect */}
       <HoverEffect
-        items={skills.map(skillCategory => ({
+        items={skills.map((skillCategory) => ({
           title: skillCategory.category,
-          description: skillCategory.skills.map(skill => skill.name).join(", "),
+          description: skillCategory.skills
+            .map((skill) => skill.name)
+            .join(", "),
           link: "#", // Add the appropriate link if necessary
         }))}
       />
