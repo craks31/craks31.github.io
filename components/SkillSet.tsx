@@ -30,6 +30,8 @@ const skills: SkillCategory[] = [
       { name: "Microservices" },
       { name: "Apache Camel" },
       { name: "Spring REST" },
+      { name: "Fast API" },
+      { name: "Flask" },
     ],
   },
   {
@@ -132,7 +134,7 @@ const TechCompetencyCard: React.FC<SkillCategory> = ({ category, skills }) => {
               <div className="relative mt-2">
                 <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-600">
                   <div
-                    className="h-2 rounded-full bg-blue-500"
+                    className="h-2 rounded-full bg-red-500"
                     style={{ width: `${skill.level}%` }}
                   ></div>
                 </div>
@@ -185,7 +187,7 @@ const SkillSet: React.FC = () => {
           description: skillCategory.skills
             .map((skill) => skill.name)
             .join(", "),
-          link: "#", // Add the appropriate link if necessary
+          link: "#", 
         }))}
       />
     </div>

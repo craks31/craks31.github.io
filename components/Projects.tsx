@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                         href={project.liveDemoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-center bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm md:text-base"
+                        className="text-center bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 text-sm md:text-base"
                       >
                         View Project
                       </a>
@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
                     // href={project.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-600"
+                    className="text-red-500 hover:text-orange-600"
                   >
                     <FiGithub size={24} />
                   </a>
