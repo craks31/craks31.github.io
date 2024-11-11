@@ -161,10 +161,10 @@ const SkillSet: React.FC = () => {
       { name: "SQL & Databases", level: 70 },
       { name: "DevOps & Cloud", level: 75 },
       { name: "QA Testing", level: 70 },
-      { name: "FrontEnd UI Development", level: 60 },
-      { name: "Blockchain & IoT", level: 30 },
-      { name: "Data Science, Gen AI, ML", level: 30 },
-      { name: "Electronics & Embedded Systems", level: 10 },
+      { name: "FrontEnd UI Development", level: 65 },
+      { name: "Blockchain & IoT", level: 60 },
+      { name: "Data Science, Gen AI, ML", level: 60 },
+      { name: "Electronics & Embedded Systems", level: 50 },
     ],
   };
 
