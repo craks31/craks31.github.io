@@ -36,12 +36,12 @@ const Contact = () => {
 
             <div className="flex items-center space-x-2">
               <FaPhone className="text-xl" />
-              <p className="text-lg">+1 913 407 2513</p>
+              <p className="text-lg">+1 469 514 0874</p>
             </div>
 
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-xl" />
-              <p className="text-lg">Aubrey, TX, United States</p>
+              <p className="text-lg">Richardson, TX, United States</p>
             </div>
           </div>
         </div>
