@@ -33,7 +33,7 @@ const Hero = () => {
         {/* Adjust image positioning */}
         <div className="flex justify-center items-center mt-4 mb-4 relative z-20">
           <img
-            src="/images/dp.jpg"
+            src="/images/dp1.png"
             alt="Profile"
             className="w-32 h-32 sm:w-32 sm:h-32 md:w-42 md:h-42 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg"
             style={{ aspectRatio: 1 / 1 }}
