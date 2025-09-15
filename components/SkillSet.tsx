@@ -61,6 +61,14 @@ const skills: SkillCategory[] = [
       { name: "Gradle" },
       { name: "Apache Camel" },
       { name: "Sonar" },
+      { name: "OpenTelemetry"},
+      { name: "Apache Airflow"},
+      { name: "OpenShift"},
+      { name: "Dynatrace"},
+      { name: "ELK (Elastic, Logstash, Kibana)"},
+      { name: "Splunk"},
+      { name: "Autosys"},
+      { name: "Terraform"}
     ],
   },
   {
@@ -91,6 +99,8 @@ const skills: SkillCategory[] = [
       { name: "Maria DB" },
       { name: "PostgreSQL" },
       { name: "MongoDB" },
+      { name: "DynamoDB"},
+      { name: "Cassandra"}
     ],
   },
   {
@@ -101,6 +111,7 @@ const skills: SkillCategory[] = [
       { name: "Telecommunication" },
       { name: "ECommerce" },
       { name: "Capital Markets" },
+      { name: "Retail"}
     ],
   },
   {
