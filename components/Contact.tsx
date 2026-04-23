@@ -1,12 +1,19 @@
 "use client";
-import React from "react";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegCopy } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  FaEnvelope,
+  FaRegCopy,
+  FaCheck,
+} from "react-icons/fa";
+import { PROFILE } from "@/data/profile";
 
 const Contact = () => {
-  // Function to copy email to clipboard
+  const [copied, setCopied] = useState(false);
+
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("your-email@gmail.com");
-    alert("Email copied to clipboard!");
+    navigator.clipboard.writeText(PROFILE.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -25,19 +32,19 @@ const Contact = () => {
           <div className="space-y-4 text-gray-800 dark:text-gray-300">
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-xl" />
-              <p className="text-lg">rakeshpokala97@gmail.com</p>
+              <p className="text-lg">{PROFILE.email}</p>
               <button
                 onClick={handleCopyEmail}
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <FaRegCopy className="text-lg" />
+                {copied ? (
+                  <FaCheck className="text-lg text-green-400" />
+                ) : (
+                  <FaRegCopy className="text-lg" />
+                )}
               </button>
             </div>
 
-            <div className="flex items-center space-x-2">
-              <FaMapMarkerAlt className="text-xl" />
-              <p className="text-lg">Frisco, TX, United States</p>
-            </div>
           </div>
         </div>
 

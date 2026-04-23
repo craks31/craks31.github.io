@@ -1,157 +1,49 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { HoverEffect } from "./ui/HoverEffect";
-// Define a type for the skills
-type Skill = {
-  name: string;
-  level?: number; // Optional for cards without progress bars
-};
+import { skills, techCompetency } from "@/data/skills";
+import type { SkillCategory } from "@/data/skills";
 
-type SkillCategory = {
-  category: string;
-  skills: Skill[];
-};
+function getBarGradient(level: number): string {
+  if (level >= 90) return "from-emerald-400 to-emerald-600";
+  if (level >= 75) return "from-blue-400 to-blue-600";
+  if (level >= 60) return "from-amber-400 to-amber-600";
+  return "from-gray-400 to-gray-500";
+}
 
-// Data for skills
-const skills: SkillCategory[] = [
-  {
-    category: "BackEnd/API Development",
-    skills: [
-      { name: "Java" },
-      { name: "Spring Boot" },
-      { name: "Node.js" },
-      { name: "Spring Batch" },
-      { name: "Java Server Pages" },
-      { name: "Jasper Reports" },
-      { name: "Spring Security" },
-      { name: "Hibernate" },
-      { name: "Apache Kafka" },
-      { name: "Spring JPA" },
-      { name: "Microservices" },
-      { name: "Apache Camel" },
-      { name: "Spring REST" },
-      { name: "Fast API" },
-      { name: "Flask" },
-    ],
-  },
-  {
-    category: "FrontEnd Development",
-    skills: [
-      { name: "React.js" },
-      { name: "Angular JS" },
-      { name: "Apache FTL" },
-      { name: "HTML & CSS" },
-      { name: "JavaScript" },
-      { name: "TypeScript" },
-      { name: "Next.js" },
-    ],
-  },
-  {
-    category: "DevOps & Cloud",
-    skills: [
-      { name: "Docker" },
-      { name: "Kubernetes" },
-      { name: "Jenkins" },
-      { name: "Git" },
-      { name: "AWS" },
-      { name: "Azure" },
-      { name: "Shell Scripting" },
-      { name: "Log4j" },
-      { name: "Maven" },
-      { name: "Gradle" },
-      { name: "Apache Camel" },
-      { name: "Sonar" },
-      { name: "OpenTelemetry"},
-      { name: "Apache Airflow"},
-      { name: "OpenShift"},
-      { name: "Dynatrace"},
-      { name: "ELK (Elastic, Logstash, Kibana)"},
-      { name: "Splunk"},
-      { name: "Autosys"},
-      { name: "Terraform"}
-    ],
-  },
-  {
-    category: "Blockchain & IoT",
-    skills: [
-      { name: "Blockchain" },
-      { name: "Solidity" },
-      { name: "IoT" },
-      { name: "Golang" },
-    ],
-  },
-  {
-    category: "Data Science",
-    skills: [
-      { name: "Natural Language Processing NLP" },
-      { name: "Python" },
-      { name: "Data Analysis" },
-      { name: "Machine Learning" },
-      { name: "Apache Spark" },
-      { name: "Big Data Hadoop" },
-    ],
-  },
-  {
-    category: "SQL & Databases",
-    skills: [
-      { name: "MySQL" },
-      { name: "Oracle" },
-      { name: "Maria DB" },
-      { name: "PostgreSQL" },
-      { name: "MongoDB" },
-      { name: "DynamoDB"},
-      { name: "Cassandra"}
-    ],
-  },
-  {
-    category: "Domain & Business",
-    skills: [
-      { name: "Healthcare" },
-      { name: "Medical Insurance" },
-      { name: "Telecommunication" },
-      { name: "ECommerce" },
-      { name: "Capital Markets" },
-      { name: "Retail"}
-    ],
-  },
-  {
-    category: "QA Testing",
-    skills: [
-      { name: "Gherkin" },
-      { name: "JUnit" },
-      { name: "Integration Testing" },
-      { name: "Jasmine Testing" },
-      { name: "Cucumber" },
-    ],
-  },
-];
-
-// Card component for "Tech Competency" with skill bars
 const TechCompetencyCard: React.FC<SkillCategory> = ({ category, skills }) => {
   return (
-    <div
-      id="skills-section"
-      className="rounded-lg shadow-md p-6 bg-white dark:bg-gray-800 w-full mb-8"
-    >
+    <div className="rounded-lg shadow-md p-6 bg-white dark:bg-gray-800 w-full mb-8">
       <h3 className="text-2xl font-semibold dark:text-white">{category}</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         {skills.map((skill, index) => (
           <div key={index} className="flex items-center space-x-4">
             <div className="flex-1">
-              <h4 className="text-lg font-medium dark:text-gray-300">
-                {skill.name}
-              </h4>
-              {/* Progress bar */}
+              <div className="flex justify-between items-center">
+                <h4 className="text-sm md:text-base font-medium dark:text-gray-300">
+                  {skill.name}
+                </h4>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {skill.level}%
+                </span>
+              </div>
               <div className="relative mt-2">
                 <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-600">
-                  <div
-                    className="h-2 rounded-full bg-red-500"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
+                  <motion.div
+                    className={`h-2 rounded-full bg-gradient-to-r ${getBarGradient(
+                      skill.level!
+                    )}`}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 1,
+                      delay: index * 0.05,
+                      ease: "easeOut",
+                    }}
+                  />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                  {skill.level}% Proficiency
-                </p>
               </div>
             </div>
           </div>
@@ -161,44 +53,28 @@ const TechCompetencyCard: React.FC<SkillCategory> = ({ category, skills }) => {
   );
 };
 
-// Main skill set component
 const SkillSet: React.FC = () => {
-  // Define the Tech Competency card
-  const techCompetencyCategory = {
-    category: "Tech Competency",
-    skills: [
-      { name: "BackEnd API Development", level: 99 },
-      { name: "BackEnd Batch Processing", level: 95 },
-      { name: "Data Structures & Algorithms", level: 75 },
-      { name: "System Design & Architecture", level: 70 },
-      { name: "SQL & Databases", level: 70 },
-      { name: "DevOps & Cloud", level: 75 },
-      { name: "QA Testing", level: 70 },
-      { name: "FrontEnd UI Development", level: 65 },
-      { name: "Blockchain & IoT", level: 60 },
-      { name: "Data Science, Gen AI, ML", level: 60 },
-      { name: "Electronics & Embedded Systems", level: 50 },
-    ],
-  };
-
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div id="skills-section" className="max-w-6xl mx-auto px-4 py-8">
+      <h2 className="heading mb-10">
+        My <span className="text-red-500">Skills</span>
+      </h2>
+
       {/* Full-width Tech Competency Card */}
       <div className="w-full">
         <TechCompetencyCard
-          category={techCompetencyCategory.category}
-          skills={techCompetencyCategory.skills}
+          category={techCompetency.category}
+          skills={techCompetency.skills}
         />
       </div>
 
-      {/* Parallel cards below with hover effect */}
+      {/* Skill category cards with hover effect */}
       <HoverEffect
         items={skills.map((skillCategory) => ({
           title: skillCategory.category,
           description: skillCategory.skills
             .map((skill) => skill.name)
             .join(", "),
-          link: "#", 
         }))}
       />
     </div>

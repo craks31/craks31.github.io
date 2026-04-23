@@ -5,18 +5,24 @@ import NavBar from "@/components/NavBar";
 import Projects from "@/components/Projects";
 import SkillSet from "@/components/SkillSet";
 
+const SectionDivider = () => (
+  <div className="w-full max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-gray-500/30 to-transparent my-4" />
+);
 
 export default function Home() {
   return (
-    <main className = "relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className = "max-w-7xl w-full">
-        <div className = " z-[-1] position:relative; top: -150px; " />
-        <NavBar></NavBar>
-        <Hero/>
-        <AboutMe></AboutMe>
-        <SkillSet></SkillSet>
-        <Projects></Projects>
-        <Contact></Contact>
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+      <div className="max-w-7xl w-full">
+        <NavBar />
+        <Hero />
+        <SectionDivider />
+        <AboutMe />
+        <SectionDivider />
+        <SkillSet />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <Contact />
       </div>
     </main>
   );

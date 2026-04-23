@@ -26,6 +26,9 @@ const config = {
   		}
   	},
   	extend: {
+  		fontFamily: {
+  			space: ["var(--font-space)", "sans-serif"],
+  		},
   		colors: {
   			black: {
   				'100': '#000319',
